@@ -1,0 +1,33 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# NOTE: data/customer_churn.csv and models/*.pkl are intentionally
+# NOT ignored. Streamlit Cloud (and any host) just runs `streamlit
+# run app.py` directly -- it does not run the training pipeline. The
+# dataset and trained model artifacts must be committed so the
+# deployed app works immediately without a manual training step.
+# (This is the standard trade-off for small/medium demo ML apps;
+# for a production system these would instead be pulled from a
+# model registry / object storage at startup.)
+
+# Exploratory/local-only outputs (regenerate via scripts, not needed
+# on the deployed app -- the app recomputes SHAP/eval charts live)
+outputs/figures/*.png
+!outputs/figures/.gitkeep
+
+# Environment / secrets
+.env
+
+# OS / editor
+.DS_Store
+.vscode/
